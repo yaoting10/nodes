@@ -1,6 +1,6 @@
 gas
 
-<img src="/Users/tim/Library/Application Support/typora-user-images/image-20220407170446924.png" alt="image-20220407170446924" style="zoom:75%;" />
+<img src="../../img/image-20220407170446924.png" alt="image-20220407170446924" style="zoom:75%;" />
 
 这个函数里面 slot0 就是成员变量 如果不先加载到内存保存为_slot0 。你每次用slot0的数据要用一次sload .这里 6  7  次   花销就是 6*800 = 4800 gas
 
