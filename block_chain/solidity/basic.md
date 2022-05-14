@@ -39,3 +39,7 @@ Storage 相当于存储读取，能够进行链上数据的改变--状态变量
 memory 相当于内存读取，不能够进行链上数据改变（修改的值，函数调用结束后就消失，不会写入链上）--局部变量，只在内存中生效
 
 calldata 和memory 类似，但是只能用于输入参数中，智能合约参数中使用calldata可以节约gas费
+
+
+
+private variable 比public variable 更节约gas值
