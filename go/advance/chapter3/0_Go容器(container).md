@@ -11,21 +11,21 @@
 - C# 语言通过 .NET 框架提供，如 List 对应数组，LinkedList 对应双链表，Dictionary 对应映射。
 - Lua 语言的 table 实现了数组和映射的功能，Lua 语言默认没有双链表支持。
 
-\1. [Go语言数组详解](http://c.biancheng.net/view/26.html)
+\1. [Go语言数组详解](https://www.kancloud.cn/imdszxs/golang/1509521)
 
-\2. [Go语言多维数组简述](http://c.biancheng.net/view/4117.html)
+\2. [Go语言多维数组简述](https://www.kancloud.cn/imdszxs/golang/1535586)
 
-\3. [Go语言切片详解](http://c.biancheng.net/view/27.html)
+\3. [Go语言切片详解](https://www.kancloud.cn/imdszxs/golang/1509523)
 
-\4. [Go语言append()为切片添加元素](http://c.biancheng.net/view/28.html)
+\4. [Go语言append()为切片添加元素](https://www.kancloud.cn/imdszxs/golang/1509524)
 
-\5. [Go语言copy()：切片复制（切片拷贝）](http://c.biancheng.net/view/29.html)
+\5. [Go语言copy()：切片复制（切片拷贝）](https://www.kancloud.cn/imdszxs/golang/1535587)
 
-\6. [Go语言从切片中删除元素](http://c.biancheng.net/view/30.html)
+\6. [Go语言从切片中删除元素](https://www.kancloud.cn/imdszxs/golang/1509526)
 
-\7. [Go语言range关键字：循环迭代切片](http://c.biancheng.net/view/4118.html)
+\7. [Go语言range关键字：循环迭代切片](https://www.kancloud.cn/imdszxs/golang/1535588)
 
-\8. [Go语言多维切片简述](http://c.biancheng.net/view/4119.html)
+\8. [Go语言多维切片简述](https://www.kancloud.cn/imdszxs/golang/1509528)
 
 \9. [Go语言map（Go语言映射）](http://c.biancheng.net/view/31.html)
 
