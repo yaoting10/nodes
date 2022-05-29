@@ -56,33 +56,45 @@ mapCreated := make(map[string]float)
 
 等价于
 
-​                mapCreated := map[string]float{} 。              
+```go
+mapCreated := map[string]float{}
+```
 
 mapAssigned 是 mapList 的引用，对 mapAssigned 的修改也会影响到 mapLit 的值。
 
 注意：可以使用 make()，但不能使用 new() 来构造 map，如果错误的使用 new() 分配了一个引用对象，会获得一个空引用的指针，相当于声明了一个未初始化的变量并且取了它的地址：
 
-​                mapCreated := new(map[string]float)              
+```go
+mapCreated := new(map[string]float)
+```
 
 接下来当我们调用mapCreated["key1"] = 4.5的时候，编译器会报错：
 
-​                invalid operation: mapCreated["key1"] (index of type *map[string]float).              
+```
+invalid operation: mapCreated["key1"] (index of type *map[string]float).
+```
 
 **map 容量**
 
 和数组不同，map 可以根据新增的 key-value 动态的伸缩，因此它不存在固定长度或者最大限制，但是也可以选择标明 map 的初始容量 capacity，格式如下：
 
-​                make(map[keytype]valuetype, cap)              
+```go
+make(map[keytype]valuetype, cap)
+```
 
 例如：
 
-​                map2 := make(map[string]float, 100)              
+```go
+map2 := make(map[string]float, 100)
+```
 
 当 map 增长到容量上限的时候，如果再增加新的 key-value，map 的大小会自动加 1，所以出于性能的考虑，对于大的 map 或者会快速扩张的 map，即使只是大概知道容量，也最好先标明。
 
 这里有一个 map 的具体例子，即将音阶和对应的音频映射起来：
 
-​                noteFrequency := map[string]float32 { "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83, "G0": 24.50, "A0": 27.50, "B0": 30.87, "A4": 440}              
+```go
+noteFrequency := map[string]float32 { "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83, "G0": 24.50, "A0": 27.50, "B0": 30.87, "A4": 440}
+```
 
 **用切片作为 map 的值**
 
@@ -90,4 +102,7 @@ mapAssigned 是 mapList 的引用，对 mapAssigned 的修改也会影响到 map
 
 [纯文本复制](http://c.biancheng.net/view/31.html#)
 
-​                mp1 := make(map[int][]int) mp2 := make(map[int]*[]int)              
+```go
+mp1 := make(map[int][]int) mp2 := make(map[int]*[]int)
+```
+
