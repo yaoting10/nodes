@@ -1,30 +1,24 @@
+### Mysql:8.0
+
 1.搜索mysql镜像
 
 ```dockerfile
-docker search mysql             
+docker search mysql
 ```
-
- 
 
 2.拉镜像
 
 ```dockerfile
-docker pull mysql:8.0  
+docker pull mysql:8.0
 ```
 
-​            
-
-3.运行mysql镜像
+ 3.运行mysql镜像
 
 ```dockerfile
-docker run  --restart=always --name mysql -p 3306:3306 -v /usr/local/lib/data:/var/lib/mysql -v /usr/local/lib/conf.d:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD='zmkj123!@#' -e TZ=Asia/Shanghai -d mysql:8.0    
+docker run  --restart=always --name mysql -p 3306:3306 -v /usr/local/lib/data:/var/lib/mysql -v /usr/local/lib/conf.d:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD='zmkj123!@#' -e TZ=Asia/Shanghai -d mysql:8.0             
 ```
 
-​          
-
-```dockerfile
-docker run --detach --restart=always --name=mysql -e MYSQL_ROOT_PASSWORD='nick123!@#' -p 3306:3306 --volume=/Users/nick/work/lib/mysql/conf.d:/etc/mysql/conf.d \ --volume=/Users/nick/work/lib/mysql/data:/var/lib/mysql \ mysql/mysql-server:8.0
-```
+### Mariadb
 
 ```dockerfile
 docker run  --restart=always --name mysql -p 3306:3306 -v /Users/nick/work/lib/mysql/data:/var/lib/mysql -v /Users/nick/work/lib/mysql/conf.d:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD='zmkj123!@#' -d mariadb
@@ -85,3 +79,32 @@ mysql> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 ```
 
 ​     
+
+### Mysql-server:8.0
+
+拉取镜像
+
+```docker
+docker pull mysql/mysql-server:8.0
+```
+
+启动容器
+
+```
+docker run  --restart=always --name=mysql -e MYSQL_ROOT_PASSWORD='tim123' -p 3306:3306 --volume=/Users/tim/work/mysql/conf.d:/etc/mysql/conf.d --volume=/Users/tim/work/mysql/data:/var/lib/mysql mysql/mysql-server:8.0
+```
+
+进入容器
+
+```
+docker exec -it <ContainerId> /bin/sh
+```
+
+授权全程访问
+
+```mysql
+#授权登录
+CREATE USER 'root'@'%' IDENTIFIED BY 'tim123';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+```
+
